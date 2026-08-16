@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DreamersCode.Utilities.Lookups.Languages</name>
+    </assembly>
+    <members>
+        <member name="T:DreamersCode.Utilities.Lookups.Languages.LanguageCollection">
+            <summary>
+            Contains a list of all the languages against which queries can be made
+            </summary>
+        </member>
+        <member name="P:DreamersCode.Utilities.Lookups.Languages.LanguageCollection.AllLanguages">
+            <summary>
+            Represents the set of languages as per ISO 639-2
+            </summary>
+        </member>
+        <member name="M:DreamersCode.Utilities.Lookups.Languages.LanguageCollection.#cctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:DreamersCode.Utilities.Lookups.Languages.Models.DisplayInfo">
+            <summary>
+            Provides display information for the given language
+            </summary>
+        </member>
+        <member name="P:DreamersCode.Utilities.Lookups.Languages.Models.DisplayInfo.LanguageCode">
+            <summary>
+            The Three letter code representing language code (based on the ISO-639-2)
+            </summary>
+        </member>
+        <member name="P:DreamersCode.Utilities.Lookups.Languages.Models.DisplayInfo.DisplayValue">
+            <summary>
+            The way the record needs to be displayed for the given language
+            </summary>
+        </member>
+        <member name="M:DreamersCode.Utilities.Lookups.Languages.Models.DisplayInfo.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="langCode">The Three letter code representing language code (based on the ISO-639-2)</param>
+            <param name="displayValue">The way the record needs to be displayed for the given language</param>
+        </member>
+        <member name="T:DreamersCode.Utilities.Lookups.Languages.Models.Language">
+            <summary>
+            Model representation of a language as per ISO 639-2
+            </summary>
+        </member>
+        <member name="P:DreamersCode.Utilities.Lookups.Languages.Models.Language.ThreeLetterCode">
+            <summary>
+            Three letter code representing the language as per ISO 639-2
+            </summary>
+        </member>
+        <member name="P:DreamersCode.Utilities.Lookups.Languages.Models.Language.TwoLetterCode">
+            <summary>
+            Two letter code that represents the language based on ISO 639-1
+            </summary>
+        </member>
+        <member name="P:DreamersCode.Utilities.Lookups.Languages.Models.Language.LanguageNames">
+            <summary>
+            The names of the language for a given language code.  English is always present, other languages might be missing
+            </summary>
+        </member>
+        <member name="M:DreamersCode.Utilities.Lookups.Languages.Models.Language.#ctor(System.String,System.String,System.Collections.Generic.List{DreamersCode.Utilities.Lookups.Languages.Models.DisplayInfo})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="threeLetterCode">The three letter code as per ISO 639-2 representing the language</param>
+            <param name="twoLetterCode">The three letter code as per ISO 639-1 representing the language</param>        
+            <param name="langNames">Names for the language based on the language code</param>        
+        </member>
+    </members>
+</doc>

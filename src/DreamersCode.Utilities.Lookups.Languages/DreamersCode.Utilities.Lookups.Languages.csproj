@@ -1,28 +1,53 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <RootNamespace>DreamersCode.PublicProjectTemplate</RootNamespace>
+    <TargetFrameworks>net10.0;net9.0;net8.0;netstandard2.0;</TargetFrameworks>
+    <RootNamespace>DreamersCode.Utilities.Lookups.Languages</RootNamespace>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <LangVersion>latest</LangVersion>
     
     <!-- Custom Properties -->
     <DefaultLanguage>en-GB</DefaultLanguage>
     <Authors>Terrence Cassar</Authors>
+    <Company>DreamersCode</Company>
     <Copyright>$([System.DateTime]::Now.Year) Dreamers Code ©</Copyright>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DocumentationFile>$(MSBuildProjectName).xml</DocumentationFile>
     <RepositoryType>git</RepositoryType>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-    <Description>this is a dummy description</Description>
+    <Description>Contains a full list of languages as per ISO-639-2. Provided by DreamersCode</Description>
     <PackageIcon>icon_small.png</PackageIcon>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
-    <!-- Versioning with MinVer -->
-
-    <MinVerDefaultPreReleaseIdentifiers>beta.0</MinVerDefaultPreReleaseIdentifiers>
+    <PackageTags>languages;ISO-639;639;language lookup;lookup;language;</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     
+    <!-- Versioning with MinVer -->
+    <MinVerDefaultPreReleaseIdentifiers>beta.0</MinVerDefaultPreReleaseIdentifiers>    
+  </PropertyGroup>
+
+  <!-- AOT configuration -->
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <IsTrimmable>True</IsTrimmable>
+    <IsAotCompatible>True</IsAotCompatible>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishAot>true</PublishAot>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net9.0'">
+    <IsTrimmable>True</IsTrimmable>
+    <IsAotCompatible>True</IsAotCompatible>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishAot>true</PublishAot>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <IsTrimmable>True</IsTrimmable>
+    <IsAotCompatible>True</IsAotCompatible>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishAot>true</PublishAot>
+
+
   </PropertyGroup>
   
   <ItemGroup>
