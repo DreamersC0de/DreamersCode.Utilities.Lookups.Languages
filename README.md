@@ -19,6 +19,10 @@ A .Net lib that offers a lists of all the languages as per ISO-639-2 in a handy 
 
 # Release Notes
 ## Version 2.0.0 (Rel Date: 16/08/2026)
+- Updated to support Dot Net 11
+- Dropped support for Dot Net 8 (now out of support)
+- 
+## Version 2.0.0 (Rel Date: 16/08/2026)
 - Migrated from Azure DevOps to GitHub
 - Updated to support Dot Net 10
 - Dropped support for Dot Net 4.6.2 (replaced with Dot Net Standard 2.0 instead)
